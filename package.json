@@ -2,7 +2,10 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module", 
- "description": "[![Actions Status](https://github.com/VgomerV/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/VgomerV/frontend-project-44/actions)",
+  "description": "[![Actions Status](https://github.com/VgomerV/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/VgomerV/frontend-project-44/actions)",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  } 
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
