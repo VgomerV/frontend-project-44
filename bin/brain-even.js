@@ -8,13 +8,14 @@ console.log(greet());
   
 const gameBrainEven = () => {
     const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
+    const numQuestions = 3;
     
     console.log(gameConditions);
   
     let i = 1;
 
-    while (i <= 3) {
-      const randomNum = getRandomInt();
+    while (i <= numQuestions) {
+      const randomNum = getRandomInt(100);
       
       console.log(`Question: ${randomNum}`);
       
