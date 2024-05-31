@@ -4,7 +4,7 @@ import { greet } from '../src/cli.js';
 import { getRandomInt } from '../src/components.js';
 import readlineSync from 'readline-sync';
 
-console.log(greet()); // стандартное приветствие
+console.log(greet());
   
 const gameBrainEven = () => {
     const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -12,6 +12,7 @@ const gameBrainEven = () => {
     console.log(gameConditions);
   
     let i = 1;
+
     while (i <= 3) {
       const randomNum = getRandomInt();
       
@@ -36,4 +37,4 @@ const gameBrainEven = () => {
     return console.log('Congratulations, Sam!');
   };
   
-  console.log(game());
+  console.log(gameBrainEven());
