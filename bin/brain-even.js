@@ -35,7 +35,7 @@ const gameBrainEven = () => {
       i += 1;
     };
   
-    console.log('Congratulations, Sam!');
+    return console.log('Congratulations, Sam!');
   };
   
   console.log(gameBrainEven());
