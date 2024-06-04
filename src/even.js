@@ -1,37 +1,21 @@
-import { getRandomInt } from './components.js';
-import readlineSync from 'readline-sync';
-import { greet } from '../src/cli.js';
+import gameLogic from './index.js';
+import { getRandomInt } from './index.js';
 
-  
-export const gameBrainEven = () => {
-    const userName = greet();
-    const gameConditions = 'Answer "yes" if the number is even, otherwise answer "no".';
-    const numQuestions = 3;
-    
-    console.log(gameConditions);
-  
-    let i = 1;
+// условия/описания игры
+  const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no".'; 
 
-    while (i <= numQuestions) {
-      const randomNum = getRandomInt(100);
-      
-      console.log(`Question: ${randomNum}`);
-      
-      const answerUser = readlineSync.question('Your answer: ');;
-      
-  
-      const isEvenRandomNum = randomNum % 2 === 0;
-      let correctAnswer;
-      isEvenRandomNum ? correctAnswer = 'yes' : correctAnswer = 'no';
-  
-      if (correctAnswer === answerUser) {
-        console.log('Correct!');
-      } else {
-        return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
-      }
-  
-      i += 1;
-    };
-  
-    return console.log(`Congratulations, ${userName}`);
-  };
+// формирование данных вопроса и корректного ответа
+const getQusetionAndCorrectAnswer = () => {
+  const maxRandomNum = 100;
+  const question = getRandomInt(maxRandomNum);
+
+  const isEvenRandomNum = question % 2 === 0;
+  let correctAnswer;
+  isEvenRandomNum ? correctAnswer = 'yes' : correctAnswer = 'no';
+
+  return [question, correctAnswer];
+};
+
+export default () => {
+  return gameLogic(gameCondition, getQusetionAndCorrectAnswer);
+};
