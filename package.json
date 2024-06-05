@@ -5,8 +5,9 @@
   "description": "[![Actions Status](https://github.com/VgomerV/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/VgomerV/frontend-project-44/actions)",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-even": "bin/games/brain-even.js",
+    "brain-calc": "bin/games/brain-calc.js",
+    "brain-gcd": "bin/games/brain-gcd.js"
   },
   "main": "index.js",
   "scripts": {

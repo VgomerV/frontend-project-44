@@ -20,7 +20,6 @@ export default (ConditionsGame, QusetionAndCorrectAnswer) => {
       
       const answerUser = readlineSync.question('Your answer: ');
 
-  
       if (correctAnswer === answerUser) {
         console.log('Correct!');
       } else {
