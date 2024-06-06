@@ -21,7 +21,6 @@ const getQusetionAndCorrectAnswer = () => {
   let resultCalc;
 
   switch (randomSymbol) {
-
     case '+':
       resultCalc = firstNum + secondNum;
       break;
@@ -32,6 +31,9 @@ const getQusetionAndCorrectAnswer = () => {
 
     case '*':
       resultCalc = firstNum * secondNum;
+      break;
+
+    default:
       break;
   }
 

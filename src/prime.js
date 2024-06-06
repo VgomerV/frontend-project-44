@@ -26,7 +26,11 @@ const getQusetionAndCorrectAnswer = () => {
     return predicate;
   };
 
-  NumPrime(number) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  if (NumPrime(number)) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no'
+  }
 
   return [question, correctAnswer];
 };

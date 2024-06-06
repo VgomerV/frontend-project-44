@@ -9,7 +9,11 @@ const getQusetionAndCorrectAnswer = () => {
   const question = getRandomInt(maxRandomNum);
 
   let correctAnswer;
-  question % 2 === 0 ? correctAnswer = 'yes' : correctAnswer = 'no';
+  if (question % 2 === 0) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
 
   return [question, correctAnswer];
 };
