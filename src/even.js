@@ -8,9 +8,9 @@ const getQusetionAndCorrectAnswer = () => {
   const maxRandomNum = 100;
   const question = getRandomInt(maxRandomNum);
 
-  const isEvenRandomNum = question % 2 === 0;
+  const EvenRandomNum = question % 2 === 0;
   let correctAnswer;
-  isEvenRandomNum ? correctAnswer = 'yes' : correctAnswer = 'no';
+  EvenRandomNum ? correctAnswer = 'yes' : correctAnswer = 'no';
 
   return [question, correctAnswer];
 };

@@ -1,7 +1,7 @@
 import gameLogic, { getRandomInt } from './index.js';
 
 // условия/описания игры
-  const gameCondition = 'Find the greatest common divisor of given numbers.';
+const gameCondition = 'Find the greatest common divisor of given numbers.';
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
@@ -13,13 +13,13 @@ const getQusetionAndCorrectAnswer = () => {
 
   const question = `${firstNum} ${secondNum}`;
 
-  while (firstNum != 0 && secondNum != 0) {
+  while (firstNum !== 0 && secondNum !== 0) {
     if(firstNum > secondNum){
       firstNum = firstNum % secondNum;
     } else {
       secondNum = secondNum % firstNum;
-    };
-  };
+    }
+  }
 
   const gcd = firstNum + secondNum;
 

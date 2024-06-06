@@ -20,20 +20,20 @@ const getQusetionAndCorrectAnswer = () => {
 
   let resultCalc;
 
-    switch (randomSymbol) {
+  switch (randomSymbol) {
 
-     case '+':
+    case '+':
       resultCalc = firstNum + secondNum;
       break;
 
-     case '-':
+    case '-':
       resultCalc = firstNum - secondNum;
       break;
 
-     case '*':
+    case '*':
       resultCalc = firstNum * secondNum;
       break;
-    }
+  }
 
   const correctAnswer = resultCalc.toString();
 

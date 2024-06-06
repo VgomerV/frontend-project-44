@@ -2,7 +2,7 @@ import gameLogic, { getRandomInt } from './index.js';
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
-};
+}
 
 // условия/описания игры
 const gameCondition = 'What number is missing in the progression?';
@@ -21,7 +21,7 @@ const getQusetionAndCorrectAnswer = () => {
 
   for (let i = 0; i < arrLength; i += 1) {
     rowNums.push(rowNums[i] + diffProgression);
-  };
+  }
 
   const correctAnswer = rowNums[unknowNum].toString();
   rowNums[unknowNum] = '..';

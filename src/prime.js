@@ -11,22 +11,22 @@ const getQusetionAndCorrectAnswer = () => {
 
   let correctAnswer;
 
-  const isNumPrime = (num) => {
+  const NumPrime = (num) => {
     let predicate = true;
 
     if (num < 1) {
-      return predicate = false;
+      predicate = false;
     } else {
-        for (let i = 2; i < num - 1; i += 1) {
-          if (num % i === 0) {
-          return predicate = false;
-          };
+      for (let i = 2; i < num - 1; i += 1) {
+        if (num % i === 0) {
+          predicate = false;
         };
-    };
+      }
+    }
     return predicate;
   };
 
-  isNumPrime(number) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  NumPrime(number) ? correctAnswer = 'yes' : correctAnswer = 'no';
 
   return [question, correctAnswer];
 };
