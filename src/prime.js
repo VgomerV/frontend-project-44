@@ -29,7 +29,7 @@ const getQusetionAndCorrectAnswer = () => {
   if (NumPrime(number)) {
     correctAnswer = 'yes';
   } else {
-    correctAnswer = 'no'
+    correctAnswer = 'no';
   }
 
   return [question, correctAnswer];
