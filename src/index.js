@@ -29,5 +29,5 @@ export default (ConditionsGame, QusetionAndCorrectAnswer) => {
       i += 1;
     };
   
-    return console.log(`Congratulations, ${userName}`);
+    return console.log(`Congratulations, ${userName}!`);
   };
