@@ -1,5 +1,4 @@
-import gameLogic from './index.js';
-import { getRandomInt } from './index.js';
+import gameLogic, { getRandomInt } from './index.js';
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
@@ -32,6 +31,4 @@ const getQusetionAndCorrectAnswer = () => {
   return [question, correctAnswer];
 };
 
-export default () => {
-  return gameLogic(gameCondition, getQusetionAndCorrectAnswer);
-};
+export default () => gameLogic(gameCondition, getQusetionAndCorrectAnswer);
