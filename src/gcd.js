@@ -14,10 +14,10 @@ const getQusetionAndCorrectAnswer = () => {
   const question = `${firstNum} ${secondNum}`;
 
   while (firstNum !== 0 && secondNum !== 0) {
-    if(firstNum > secondNum){
-      firstNum = firstNum % secondNum;
+    if (firstNum > secondNum) {
+      firstNum %= secondNum;
     } else {
-      secondNum = secondNum % firstNum;
+      secondNum %= firstNum;
     }
   }
 

@@ -20,7 +20,7 @@ const getQusetionAndCorrectAnswer = () => {
       for (let i = 2; i < num - 1; i += 1) {
         if (num % i === 0) {
           predicate = false;
-        };
+        }
       }
     }
     return predicate;

@@ -3,7 +3,7 @@ import greeting from './cli.js';
 
 export function getRandomInt(max) {
   return Math.floor(Math.random() * max);
-};
+}
 
 export default (ConditionsGame, QusetionAndCorrectAnswer) => {
   const numRoundCount = 3;
@@ -24,10 +24,10 @@ export default (ConditionsGame, QusetionAndCorrectAnswer) => {
       console.log('Correct!');
     } else {
       return console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${userName}!`);
-    };
+    }
 
     i += 1;
-    };
+  }
 
   return console.log(`Congratulations, ${userName}!`);
 };
