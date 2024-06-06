@@ -1,25 +1,25 @@
 import gameLogic from './index.js';
 import { getRandomInt } from './index.js';
 
-// условия/описания игры
-  const gameCondition = 'What is the result of the expression?.'; 
+//условия/описания игры
+const gameCondition = 'What is the result of the expression?.';
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-    const maxRandomNum = 100;
-    const maxRandomSymbol = 3;
+  const maxRandomNum = 100;
+  const maxRandomSymbol = 3;
     
-    const operationSymbol = ['+', '*', '-'];
+  const operationSymbol = ['+', '*', '-'];
     
-    const firstNum = getRandomInt(maxRandomNum);
+  const firstNum = getRandomInt(maxRandomNum);
     
-    const secondNum = getRandomInt(maxRandomNum);
+  const secondNum = getRandomInt(maxRandomNum);
     
-    const randomSymbol = operationSymbol[getRandomInt(maxRandomSymbol)];
+  const randomSymbol = operationSymbol[getRandomInt(maxRandomSymbol)];
     
-    const question = `${firstNum} ${randomSymbol} ${secondNum}`;
+  const question = `${firstNum} ${randomSymbol} ${secondNum}`;
     
-    let resultCalc;
+  let resultCalc;
     
     switch (randomSymbol) {
     
@@ -34,13 +34,13 @@ const getQusetionAndCorrectAnswer = () => {
      case '*':
       resultCalc = firstNum * secondNum;
       break;
-    };
+    }
 
-    const correctAnswer = resultCalc.toString();
+  const correctAnswer = resultCalc.toString();
     
-    return [question, correctAnswer];
-    };
+  return [question, correctAnswer];
+};
 
 export default () => {
-    return gameLogic(gameCondition, getQusetionAndCorrectAnswer);
+  return gameLogic(gameCondition, getQusetionAndCorrectAnswer);
 };
