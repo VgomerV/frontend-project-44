@@ -10,11 +10,11 @@ const getQusetionAndCorrectAnswer = () => {
 
   const operationSymbol = ['+', '*', '-'];
 
-  const firstNum = getRandomInt(maxRandomNum);
+  const firstNum = Math.trunc(getRandomInt(0, maxRandomNum));
 
-  const secondNum = getRandomInt(maxRandomNum);
+  const secondNum = Math.trunc(getRandomInt(0, maxRandomNum));
 
-  const randomSymbol = operationSymbol[getRandomInt(maxRandomSymbol)];
+  const randomSymbol = operationSymbol[Math.trunc(getRandomInt(0, maxRandomSymbol))];
 
   const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 

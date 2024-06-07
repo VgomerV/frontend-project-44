@@ -1,20 +1,28 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
-export function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+const numRoundCount = 3;
+
+const greeting = () => {
+  console.log('Welcome to the Brain Games!');
+  const getUserName = readlineSync.question('May I have your name? ');
+  const userName = getUserName;
+  console.log(`Hello, ${userName}!`);
+  return userName;
+};
+
+export const getRandomInt = (min, max) => {
+  return Math.random() * (max - min) + min;
 }
 
-export default (ConditionsGame, QusetionAndCorrectAnswer) => {
-  const numRoundCount = 3;
+export default (conditionsGame, qusetionAndCorrectAnswer) => {
   const userName = greeting();
 
-  console.log(ConditionsGame);
+  console.log(conditionsGame);
 
   let i = 1;
 
   while (i <= numRoundCount) {
-    const [question, correctAnswer] = QusetionAndCorrectAnswer();
+    const [question, correctAnswer] = qusetionAndCorrectAnswer();
 
     console.log(`Question: ${question}`);
 

@@ -6,7 +6,7 @@ const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no"
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
   const maxRandomNum = 100;
-  const question = getRandomInt(maxRandomNum);
+  const question = Math.trunc(getRandomInt(0, maxRandomNum));
 
   let correctAnswer;
   if (question % 2 === 0) {

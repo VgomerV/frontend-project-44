@@ -1,21 +1,17 @@
 import gameLogic, { getRandomInt } from '../index.js';
 
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
-}
-
 // условия/описания игры
 const gameCondition = 'What number is missing in the progression?';
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const arrLength = Math.trunc(getRandomArbitrary(5, 10)); // длина прогрессии
+  const arrLength = Math.trunc(getRandomInt(5, 10)); // длина прогрессии
 
-  const initProgression = getRandomInt(50); // начальное число  прогрессии
+  const initProgression = Math.trunc(getRandomInt(0, 50)); // начальное число  прогрессии
 
-  const diffProgression = Math.trunc(getRandomArbitrary(2, 5)); // шаг разности
+  const diffProgression = Math.trunc(getRandomInt(2, 5)); // шаг разности
 
-  const unknowNum = getRandomInt(arrLength); //  индекс неизвестного числа
+  const unknowNum = Math.trunc(getRandomInt(0, arrLength)); //  индекс неизвестного числа
 
   const rowNums = [initProgression];
 
