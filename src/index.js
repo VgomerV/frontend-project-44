@@ -10,9 +10,7 @@ const greeting = () => {
   return userName;
 };
 
-export const getRandomInt = (min, max) => {
-  return Math.random() * (max - min) + min;
-}
+export const getRandomInt = (min, max) => Math.random() * (max - min) + min;
 
 export default (conditionsGame, qusetionAndCorrectAnswer) => {
   const userName = greeting();
