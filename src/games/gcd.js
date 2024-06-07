@@ -1,4 +1,4 @@
-import gameLogic, { getRandomInt } from './index.js';
+import gameLogic, { getRandomInt } from '../index.js';
 
 // условия/описания игры
 const gameCondition = 'Find the greatest common divisor of given numbers.';

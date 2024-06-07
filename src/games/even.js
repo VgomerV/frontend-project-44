@@ -1,4 +1,4 @@
-import gameLogic, { getRandomInt } from './index.js';
+import gameLogic, { getRandomInt } from '../index.js';
 
 // условия/описания игры
 const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no".';

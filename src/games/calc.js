@@ -1,4 +1,4 @@
-import gameLogic, { getRandomInt } from './index.js';
+import gameLogic, { getRandomInt } from '../index.js';
 
 // условия/описания игры
 const gameCondition = 'What is the result of the expression?.';

@@ -1,4 +1,4 @@
-import gameLogic, { getRandomInt } from './index.js';
+import gameLogic, { getRandomInt } from '../index.js';
 
 // условия/описания игры
 const gameCondition = 'Answer "yes" if given number is prime. Otherwise answer "no"';
