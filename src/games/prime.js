@@ -21,7 +21,7 @@ const operationPrime = () => {
   }
 
   return [number, predicate];
-}
+};
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {

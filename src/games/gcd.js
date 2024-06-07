@@ -28,7 +28,7 @@ const operationGcd = () => {
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  let [firstNum, secondNum, gcd] = operationGcd();
+  const [firstNum, secondNum, gcd] = operationGcd();
 
   const question = `${firstNum} ${secondNum}`;
 

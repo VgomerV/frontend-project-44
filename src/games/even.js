@@ -9,7 +9,7 @@ const maxRandomNum = 100;
 const opreationEven = () => {
   const randomNum = Math.trunc(getRandomInt(0, maxRandomNum));
   return randomNum;
-}
+};
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {

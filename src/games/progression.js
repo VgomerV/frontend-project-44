@@ -3,7 +3,6 @@ import gameLogic, { getRandomInt } from '../index.js';
 // условия/описания игры
 const gameCondition = 'What number is missing in the progression?';
 
-
 // логика вычислений
 const operationProgression = () => {
   const arrLength = Math.trunc(getRandomInt(5, 10)); // длина прогрессии
@@ -22,7 +21,7 @@ const operationProgression = () => {
   rowNums[unknowNum] = '..';
 
   return [missingValue, rowNums];
-}
+};
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {

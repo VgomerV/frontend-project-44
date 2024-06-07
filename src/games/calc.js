@@ -41,7 +41,7 @@ const operationCalc = () => {
 // формирование вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
   const [firstNum, secondNum, randomSymbol, resultCalc] = operationCalc();
-  
+
   const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 
   const correctAnswer = resultCalc.toString();
