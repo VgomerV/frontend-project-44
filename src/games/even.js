@@ -6,14 +6,14 @@ const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no"
 const maxRandomNum = 100;
 
 // логика вычислений
-const opreationEven = () => {
+const getRandomNum = () => {
   const randomNum = Math.trunc(getRandomInt(0, maxRandomNum));
   return randomNum;
 };
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const question = opreationEven();
+  const question = getRandomNum();
 
   let correctAnswer;
   if (question % 2 === 0) {

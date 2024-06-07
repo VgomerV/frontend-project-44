@@ -4,17 +4,17 @@ import gameLogic, { getRandomInt } from '../index.js';
 const gameCondition = 'What is the result of the expression?.';
 
 const maxRandomNum = 100;
-const maxRandomSymbol = 3;
+const maxRandomNumSymbol = 3;
 
 // логика вычислений
-const operationCalc = () => {
-  const operationSymbol = ['+', '*', '-'];
+const getRusltCalc = () => {
+  const operationSymbols = ['+', '*', '-'];
 
   const firstNum = Math.trunc(getRandomInt(0, maxRandomNum));
 
   const secondNum = Math.trunc(getRandomInt(0, maxRandomNum));
 
-  const randomSymbol = operationSymbol[Math.trunc(getRandomInt(0, maxRandomSymbol))];
+  const randomSymbol = operationSymbols[Math.trunc(getRandomInt(0, maxRandomNumSymbol))];
 
   let resultCalc;
 
@@ -40,7 +40,7 @@ const operationCalc = () => {
 
 // формирование вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const [firstNum, secondNum, randomSymbol, resultCalc] = operationCalc();
+  const [firstNum, secondNum, randomSymbol, resultCalc] = getRusltCalc();
 
   const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 

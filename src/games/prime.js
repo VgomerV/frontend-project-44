@@ -5,7 +5,7 @@ const gameCondition = 'Answer "yes" if given number is prime. Otherwise answer "
 const maxRandomNum = 1000;
 
 // логика вычислений
-const operationPrime = () => {
+const getResultMatchingNumPrime = () => {
   const number = Math.trunc(getRandomInt(0, maxRandomNum));
 
   let predicate = true;
@@ -25,7 +25,7 @@ const operationPrime = () => {
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const [number, predicate] = operationPrime();
+  const [number, predicate] = getResultMatchingNumPrime();
 
   const question = number;
 
