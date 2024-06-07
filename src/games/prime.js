@@ -2,32 +2,36 @@ import gameLogic, { getRandomInt } from '../index.js';
 
 // условия/описания игры
 const gameCondition = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+const maxRandomNum = 1000;
+
+// логика вычислений
+const operationPrime = () => {
+  const number = Math.trunc(getRandomInt(0, maxRandomNum));
+
+  let predicate = true;
+
+  if (number < 1) {
+    predicate = false;
+  } else {
+    for (let i = 2; i < number - 1; i += 1) {
+      if (number % i === 0) {
+        predicate = false;
+      }
+    }
+  }
+
+  return [number, predicate];
+}
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const maxRandomNum = 1000;
-  const number = Math.trunc(getRandomInt(0, maxRandomNum));
+  const [number, predicate] = operationPrime();
 
   const question = number;
 
   let correctAnswer;
 
-  const NumPrime = (num) => {
-    let predicate = true;
-
-    if (num < 1) {
-      predicate = false;
-    } else {
-      for (let i = 2; i < num - 1; i += 1) {
-        if (num % i === 0) {
-          predicate = false;
-        }
-      }
-    }
-    return predicate;
-  };
-
-  if (NumPrime(number)) {
+  if (predicate) {
     correctAnswer = 'yes';
   } else {
     correctAnswer = 'no';

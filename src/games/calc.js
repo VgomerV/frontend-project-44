@@ -3,11 +3,11 @@ import gameLogic, { getRandomInt } from '../index.js';
 // условия/описания игры
 const gameCondition = 'What is the result of the expression?.';
 
-// формирование данных вопроса и корректного ответа
-const getQusetionAndCorrectAnswer = () => {
-  const maxRandomNum = 100;
-  const maxRandomSymbol = 3;
+const maxRandomNum = 100;
+const maxRandomSymbol = 3;
 
+// логика вычислений
+const operationCalc = () => {
   const operationSymbol = ['+', '*', '-'];
 
   const firstNum = Math.trunc(getRandomInt(0, maxRandomNum));
@@ -15,8 +15,6 @@ const getQusetionAndCorrectAnswer = () => {
   const secondNum = Math.trunc(getRandomInt(0, maxRandomNum));
 
   const randomSymbol = operationSymbol[Math.trunc(getRandomInt(0, maxRandomSymbol))];
-
-  const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 
   let resultCalc;
 
@@ -36,6 +34,15 @@ const getQusetionAndCorrectAnswer = () => {
     default:
       break;
   }
+
+  return [firstNum, secondNum, randomSymbol, resultCalc];
+};
+
+// формирование вопроса и корректного ответа
+const getQusetionAndCorrectAnswer = () => {
+  const [firstNum, secondNum, randomSymbol, resultCalc] = operationCalc();
+  
+  const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 
   const correctAnswer = resultCalc.toString();
 

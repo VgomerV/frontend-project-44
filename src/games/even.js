@@ -3,10 +3,17 @@ import gameLogic, { getRandomInt } from '../index.js';
 // условия/описания игры
 const gameCondition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const maxRandomNum = 100;
+
+// логика вычислений
+const opreationEven = () => {
+  const randomNum = Math.trunc(getRandomInt(0, maxRandomNum));
+  return randomNum;
+}
+
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const maxRandomNum = 100;
-  const question = Math.trunc(getRandomInt(0, maxRandomNum));
+  const question = opreationEven();
 
   let correctAnswer;
   if (question % 2 === 0) {
