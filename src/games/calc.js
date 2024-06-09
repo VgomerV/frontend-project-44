@@ -6,45 +6,40 @@ const gameCondition = 'What is the result of the expression?.';
 const maxRandomNum = 100;
 const maxRandomNumSymbol = 3;
 
+const operationSymbols = ['+', '*', '-'];
+
+const getRandomParameters = () => {
+  const firstNum = getRandomInt(0, maxRandomNum);
+  const secondNum = getRandomInt(0, maxRandomNum);
+  const randomSymbol = operationSymbols[getRandomInt(0, maxRandomNumSymbol)];
+
+  return [firstNum, secondNum, randomSymbol];
+};
+
 // логика вычислений
-const getRusltCalc = () => {
-  const operationSymbols = ['+', '*', '-'];
-
-  const firstNum = Math.trunc(getRandomInt(0, maxRandomNum));
-
-  const secondNum = Math.trunc(getRandomInt(0, maxRandomNum));
-
-  const randomSymbol = operationSymbols[Math.trunc(getRandomInt(0, maxRandomNumSymbol))];
-
-  let resultCalc;
-
+const getResultCalc = (firstNum, secondNum, randomSymbol) => {
   switch (randomSymbol) {
     case '+':
-      resultCalc = firstNum + secondNum;
-      break;
+      return firstNum + secondNum;
 
     case '-':
-      resultCalc = firstNum - secondNum;
-      break;
+      return firstNum - secondNum;
 
     case '*':
-      resultCalc = firstNum * secondNum;
-      break;
+      return firstNum * secondNum;
 
     default:
       break;
   }
-
-  return [firstNum, secondNum, randomSymbol, resultCalc];
 };
 
 // формирование вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const [firstNum, secondNum, randomSymbol, resultCalc] = getRusltCalc();
+  const [firstNum, secondNum, randomSymbol] = getRandomParameters();
 
   const question = `${firstNum} ${randomSymbol} ${secondNum}`;
 
-  const correctAnswer = resultCalc.toString();
+  const correctAnswer = getResultCalc(firstNum, secondNum, randomSymbol).toString();
 
   return [question, correctAnswer];
 };
