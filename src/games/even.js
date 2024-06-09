@@ -15,7 +15,7 @@ const isNumEven = (num) => {
     return 'yes';
   } else {
     return 'no';
-  }  
+  }
 };
 
 // формирование данных вопроса и корректного ответа

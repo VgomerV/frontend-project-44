@@ -7,5 +7,3 @@ export default () => {
   console.log(`Hello, ${userName}!`);
   return userName;
 };
-
-Object.prototype.hasOwnProperty

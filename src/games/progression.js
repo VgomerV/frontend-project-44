@@ -15,7 +15,7 @@ const getRandomParameters = () => {
 // логика вычислений
 const getProgression = () => {
   const [progressionLength, initProgression, diffProgression, unknowNum] = getRandomParameters();
-  
+
   const rowNums = [initProgression];
 
   for (let i = 0; i < progressionLength; i += 1) {
