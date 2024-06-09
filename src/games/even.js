@@ -11,11 +11,14 @@ const getRandomNum = () => {
 };
 
 const isNumEven = (num) => {
+  let answer;
   if (num % 2 === 0) {
-    return 'yes';
+    answer = 'yes';
   } else {
-    return 'no';
+    answer = 'no';
   }
+
+  return answer;
 };
 
 // формирование данных вопроса и корректного ответа
