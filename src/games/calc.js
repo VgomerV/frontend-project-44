@@ -6,7 +6,7 @@ const gameCondition = 'What is the result of the expression?.';
 const maxRandomNum = 100;
 const maxRandomNumSymbol = 3;
 
-const operationSymbols = ['+', '*', '-'];
+const operationSymbols = ['/', '*', '-'];
 
 const getRandomParameters = () => {
   const firstNum = getRandomInt(0, maxRandomNum);
@@ -31,7 +31,7 @@ const getResultCalc = (firstNum, secondNum, randomSymbol) => {
     default:
       break;
   }
-  return 'Oops! Error, something went wrong. Try again.';
+  return 'Error, failed to calculate. Try again.';
 };
 
 // формирование вопроса и корректного ответа
