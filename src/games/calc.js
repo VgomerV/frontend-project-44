@@ -6,7 +6,7 @@ const gameCondition = 'What is the result of the expression?.';
 const maxRandomNum = 100;
 const maxRandomNumSymbol = 3;
 
-const operationSymbols = ['/', '*', '-'];
+const operationSymbols = ['+', '*', '-'];
 
 const getRandomParameters = () => {
   const firstNum = getRandomInt(0, maxRandomNum);
