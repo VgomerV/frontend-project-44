@@ -31,7 +31,6 @@ const getResultCalc = (firstNum, secondNum, randomSymbol) => {
     default:
       break;
   }
-  return 'Error, failed to calculate. Try again.';
 };
 
 // формирование вопроса и корректного ответа
