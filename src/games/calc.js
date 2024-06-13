@@ -20,7 +20,7 @@ const getResultCalc = (firstNum, secondNum, randomSymbol) => {
       return firstNum * secondNum;
 
     default:
-      break;
+      return null;
   }
 };
 
