@@ -5,20 +5,8 @@ const gameCondition = 'Find the greatest common divisor of given numbers.';
 
 const maxRandomNum = 100;
 
-const getRandomNum = () => {
-  const firstNum = getRandomInt(0, maxRandomNum);
-  const secondNum = getRandomInt(0, maxRandomNum);
-
-  return [firstNum, secondNum];
-};
-
 // логика вычислений
-const getResultCalcGcd = () => {
-  let [firstNum, secondNum] = getRandomNum();
-
-  const questionFirstNum = firstNum;
-  const questionSecondNum = secondNum;
-
+const getResultCalcGcd = (firstNum, secondNum) => {
   while (firstNum !== 0 && secondNum !== 0) {
     if (firstNum > secondNum) {
       firstNum %= secondNum;
@@ -27,18 +15,17 @@ const getResultCalcGcd = () => {
     }
   }
 
-  const gcd = firstNum + secondNum;
-
-  return [questionFirstNum, questionSecondNum, gcd];
+  return firstNum + secondNum;
 };
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const [firstNum, secondNum, gcd] = getResultCalcGcd();
+  const firstNum = getRandomInt(0, maxRandomNum);
+  const secondNum = getRandomInt(0, maxRandomNum);
 
   const question = `${firstNum} ${secondNum}`;
 
-  const correctAnswer = gcd.toString();
+  const correctAnswer = getResultCalcGcd(firstNum, secondNum).toString();
 
   return [question, correctAnswer];
 };

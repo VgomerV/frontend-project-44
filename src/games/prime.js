@@ -4,41 +4,30 @@ import gameLogic, { getRandomInt } from '../index.js';
 const gameCondition = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 const maxRandomNum = 1000;
 
-const getRandomNum = () => {
-  const randomNum = getRandomInt(0, maxRandomNum);
-  return randomNum;
-};
-
 const isNumPrime = (number) => {
   let predicate = true;
 
   if (number < 1) {
-    predicate = false;
+    return false;
   } else {
-    for (let i = 2; i < number - 1; i += 1) {
+    for (let i = 2; i < Math.sqrt(number); i += 1) {
       if (number % i === 0) {
-        predicate = false;
+        return false;
       }
     }
   }
-  return predicate;
+  return true;
 };
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const number = getRandomNum();
-
-  const predicate = isNumPrime(number);
+  const number = getRandomInt(0, maxRandomNum);
 
   const question = number;
 
   let correctAnswer;
 
-  if (predicate) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  isNumPrime(number) ? correctAnswer = 'yes' : correctAnswer = 'no'
 
   return [question, correctAnswer];
 };
