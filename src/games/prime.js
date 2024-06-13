@@ -8,7 +8,7 @@ const isNumPrime = (number) => {
   if (number < 1) {
     return false;
   }
-  
+
   for (let i = 2; i <= Math.sqrt(number); i += 1) {
     if (number % i === 0) {
       return false;
@@ -21,12 +21,10 @@ const isNumPrime = (number) => {
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
   const number = getRandomInt(0, maxRandomNum);
-
+  const predicate = isNumPrime(number);
   const question = number;
 
-  let correctAnswer;
-
-  isNumPrime(number) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  const correctAnswer = predicate ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };

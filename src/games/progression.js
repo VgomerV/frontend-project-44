@@ -20,13 +20,12 @@ const getProgression = (progressionLength, initProgression, diffProgression, unk
 
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
-  const progressionLength = getRandomInt(5, 10); // длина прогрессии
-  const initProgression = getRandomInt(0, 50); // начальное число  прогрессии
-  const diffProgression = getRandomInt(2, 5); // шаг разности
+  const progresLength = getRandomInt(5, 10); // длина прогрессии
+  const initProgres = getRandomInt(0, 50); // начальное число  прогрессии
+  const diffProgres = getRandomInt(2, 5); // шаг разности
   const unknowNum = getRandomInt(0, progressionLength); //  индекс неизвестного числа
 
-  const [missingValue, rowNums] = getProgression(progressionLength, initProgression, diffProgression, 
-  unknowNum);
+  const [missingValue, rowNums] = getProgression(progresLength, initProgres, diffProgres, unknowNum);
 
   const correctAnswer = missingValue;
 
