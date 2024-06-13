@@ -16,8 +16,7 @@ const isNumEven = (num) => {
 // формирование данных вопроса и корректного ответа
 const getQusetionAndCorrectAnswer = () => {
   const question = getRandomInt(0, maxRandomNum);
-  let correctAnswer;
-  isNumEven(question) ? correctAnswer = 'yes' : correctAnswer = 'no';
+  const correctAnswer = isNumEven(question) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
