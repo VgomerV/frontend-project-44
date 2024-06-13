@@ -4,11 +4,11 @@ import gameLogic, { getRandomInt } from '../index.js';
 const gameCondition = 'What number is missing in the progression?';
 
 // логика вычислений
-const getProgression = (progressionLength, initProgression, diffProgression, unknowNum) => {
-  const rowNums = [initProgression];
+const getProgression = (progresLength, initProgres, diffProgres, unknowNum) => {
+  const rowNums = [initProgres];
 
-  for (let i = 0; i < progressionLength; i += 1) {
-    rowNums.push(rowNums[i] + diffProgression);
+  for (let i = 0; i < progresLength; i += 1) {
+    rowNums.push(rowNums[i] + diffProgres);
   }
 
   const missingValue = rowNums[unknowNum].toString();
@@ -23,7 +23,7 @@ const getQusetionAndCorrectAnswer = () => {
   const progresLength = getRandomInt(5, 10); // длина прогрессии
   const initProgres = getRandomInt(0, 50); // начальное число  прогрессии
   const diffProgres = getRandomInt(2, 5); // шаг разности
-  const unknowNum = getRandomInt(0, progressionLength); //  индекс неизвестного числа
+  const unknowNum = getRandomInt(0, progresLength); //  индекс неизвестного числа
 
   const [missingValue, rowNums] = getProgression(progresLength, initProgres, diffProgres, unknowNum);
 
