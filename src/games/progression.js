@@ -25,7 +25,8 @@ const getQusetionAndCorrectAnswer = () => {
   const diffProgression = getRandomInt(2, 5); // шаг разности
   const unknowNum = getRandomInt(0, progressionLength); //  индекс неизвестного числа
 
-  const [missingValue, rowNums] = getProgression(progressionLength, initProgression, diffProgression, unknowNum);
+  const [missingValue, rowNums] = getProgression(progressionLength, initProgression, diffProgression, 
+  unknowNum);
 
   const correctAnswer = missingValue;
 
