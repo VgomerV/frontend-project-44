@@ -7,8 +7,8 @@ const maxRandomNum = 100;
 
 // логика вычислений
 const getResultCalcGcd = (a, b) => {
-  const firstNum = a;
-  const secondNum = b;
+  let firstNum = a;
+  let secondNum = b;
 
   while (firstNum !== 0 && secondNum !== 0) {
     if (firstNum > secondNum) {
