@@ -22,5 +22,12 @@
   "homepage": "https://github.com/VgomerV/frontend-project-44#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^1.10.0",
+    "@eslint/js": "^9.34.0",
+    "@stylistic/eslint-plugin": "^5.3.1",
+    "eslint": "^9.34.0",
+    "globals": "^16.3.0"
   }
 }
