@@ -1,0 +1,19 @@
+import gameCore from '../index.js'
+
+const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".'
+const maxRandomInt = 100
+
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * (max - 1 + 1))
+}
+
+const isEvenInt = num => num % 2 === 0 ? true : false
+
+const evenGameLogic = () => {
+  const randomNum = getRandomInt(maxRandomInt)
+  const correctAnswer = isEvenInt(randomNum) ? 'yes' : 'no'
+
+  return [randomNum, correctAnswer]
+}
+
+export default () => gameCore(gameRules, evenGameLogic)
