@@ -1,11 +1,7 @@
-import gameCore from '../index.js'
+import gameCore, { getRandomInt } from '../index.js'
 
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".'
 const maxRandomInt = 100
-
-const getRandomInt = (max) => {
-  return Math.floor(Math.random() * (max - 1 + 1))
-}
 
 const isEvenInt = num => num % 2 === 0 ? true : false
 

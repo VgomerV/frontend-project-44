@@ -2,6 +2,10 @@ import readlineSync from 'readline-sync'
 
 const roundCount = 3
 
+const getRandomInt = (min, max) => {
+  return Math.trunc(Math.random() * (max - min) + min)
+}
+
 const gameCore = (gameRules, gameLogic) => {
   console.log('Welcome to the Brain Games!')
   const userName = readlineSync.question('May I have your name? ')
@@ -28,4 +32,5 @@ const gameCore = (gameRules, gameLogic) => {
   console.log(`Congratulations, ${userName}`)
 }
 
+export { getRandomInt }
 export default gameCore
