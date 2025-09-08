@@ -10,7 +10,7 @@ const calcGameLogic = () => {
   const mathSymbolIn = getRandomInt(0, 3)
   const mathSymbol = operationSymbols[mathSymbolIn]
 
-  const question = `${randomNum1} ${mathSymbol} ${randomNum2}`
+  let question = `${randomNum1} ${mathSymbol} ${randomNum2}`
   let correctAnswer = 0
 
   switch (mathSymbol) {
