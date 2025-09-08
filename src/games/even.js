@@ -6,7 +6,7 @@ const maxRandomInt = 100
 const isEvenInt = num => num % 2 === 0 ? true : false
 
 const evenGameLogic = () => {
-  const randomNum = getRandomInt(maxRandomInt)
+  const randomNum = getRandomInt(0, maxRandomInt)
   const correctAnswer = isEvenInt(randomNum) ? 'yes' : 'no'
 
   return [randomNum, correctAnswer]
