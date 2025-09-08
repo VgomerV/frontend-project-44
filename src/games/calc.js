@@ -4,7 +4,7 @@ const gameRules = 'What is the result of the expression?'
 const maxRandomInt = 20
 const operationSymbols = ['+', '-', '*']
 
-const evenGameLogic = () => {
+const calcGameLogic = () => {
   const randomNum1 = getRandomInt(0, maxRandomInt)
   const randomNum2 = getRandomInt(0, maxRandomInt)
   const mathSymbolIn = getRandomInt(0, 3)
@@ -32,4 +32,4 @@ const evenGameLogic = () => {
   return [question, correctAnswer]
 }
 
-export default () => gameCore(gameRules, evenGameLogic)
+export default () => gameCore(gameRules, calcGameLogic)

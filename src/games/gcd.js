@@ -16,7 +16,7 @@ const findGCD = (firstNum, secondNum) => {
   return dividend.toString()
 }
 
-const evenGameLogic = () => {
+const gcdGameLogic = () => {
   const randomNum1 = getRandomInt(0, maxRandomInt)
   const randomNum2 = getRandomInt(0, maxRandomInt)
 
@@ -26,4 +26,4 @@ const evenGameLogic = () => {
   return [question, correctAnswer]
 }
 
-export default () => gameCore(gameRules, evenGameLogic)
+export default () => gameCore(gameRules, gcdGameLogic)
