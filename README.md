@@ -17,3 +17,72 @@
 $ sudo npm link 
 ```
 
+#Игра: "Проверка на чётность"
+
+Суть игры в следующем: игроку показывается случайное число. И нужно определить чётное оно или нечётное.
+
+*Запуск игры*
+
+```
+$ brain-even
+```
+
+*Пример игры*
+
+[![asciicast](https://asciinema.org/a/dHTc7w3r99fwjwkECdJJ35HKV.svg)](https://asciinema.org/a/dHTc7w3r99fwjwkECdJJ35HKV)
+
+#Игра: "Калькулятор"
+
+Суть игры в следующем: игроку показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+
+*Запуск игры*
+
+```
+$ brain-calc
+```
+
+*Пример игры*
+
+[![asciicast](https://asciinema.org/a/WwRjlvOuKCvnMRBzBb22xiDGf.svg)](https://asciinema.org/a/WwRjlvOuKCvnMRBzBb22xiDGf)
+
+#Игра "НОД"
+
+Суть игры в следующем: игроку показывается два случайных числа, например, 25 50. Необходимо вычислить и ввести наибольший общий делитель этих чисел.
+
+*Запуск игры*
+
+```
+$ brain-gcd
+```
+
+*Пример игры*
+
+[![asciicast](https://asciinema.org/a/S5vLk6MaxPpKJm93GBfzvrOCa.svg)](https://asciinema.org/a/S5vLk6MaxPpKJm93GBfzvrOCa)
+
+#Игра "Арифметическая прогрессия"
+
+Суть игры в следующем: игроку показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+
+*Запуск игры*
+
+```
+$ brain-progression
+```
+
+*Пример игры*
+
+[![asciicast](https://asciinema.org/a/TkK6U8zcoqdk0YoRtqFq2bTed.svg)](https://asciinema.org/a/TkK6U8zcoqdk0YoRtqFq2bTed)
+
+#Игра "Простое ли число?"
+
+Суть игры в следующем: игроку показывается случайное число. И нужно определить простое оно или нет.
+
+*Запуск игры*
+
+```
+$ brain-prime
+```
+
+*Пример игры*
+
+[![asciicast](https://asciinema.org/a/E0P3cPEBKsyHK8AudMqgiy57q.svg)](https://asciinema.org/a/E0P3cPEBKsyHK8AudMqgiy57q)
