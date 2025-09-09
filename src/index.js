@@ -29,7 +29,7 @@ const gameCore = (gameRules, gameLogic) => {
     roundNumber += 1
   }
 
-  console.log(`Congratulations, ${userName}`)
+  console.log(`Congratulations, ${userName}!`)
 }
 
 export { getRandomInt }
