@@ -15,7 +15,8 @@ const progressionGameLogic = () => {
     if (i === hiddenIn) {
       arrayProgression.push('..')
       correctAnswer = currentNum.toString()
-    } else {
+    }
+    else {
       arrayProgression.push(currentNum)
     }
     startNum = currentNum
