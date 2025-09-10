@@ -1,12 +1,17 @@
 import gameCore, { getRandomInt } from '../index.js'
 
-const gameRules = 'What number is missing in the progression?'
+const gameRules = lang => lang.rulesProgressionGame
 
-const progressionGameLogic = () => {
-  const lengthArray = getRandomInt(5, 10)
+const progressionGameLogic = (difficulty) => {
+  const minLength = difficulty === 'n' ? 5 : 10
+  const maxLength = difficulty === 'n' ? 10 : 15
+  const minStep = difficulty === 'n' ? 2 : 6
+  const maxStep = difficulty === 'n' ? 2 : 13
+
+  const lengthArray = getRandomInt(minLength, maxLength)
   const hiddenIn = getRandomInt(1, lengthArray - 1)
   let startNum = getRandomInt(2, 50)
-  const step = getRandomInt(2, 6)
+  const step = getRandomInt(minStep, maxStep)
   const arrayProgression = [startNum]
   let correctAnswer = startNum.toString()
 

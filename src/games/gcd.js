@@ -1,7 +1,6 @@
 import gameCore, { getRandomInt } from '../index.js'
 
-const gameRules = 'Find the greatest common divisor of given numbers.'
-const maxRandomInt = 100
+const gameRules = lang => lang.rulesGcdGame
 
 const findGCD = (firstNum, secondNum) => {
   let dividend = firstNum > secondNum ? firstNum : secondNum
@@ -16,7 +15,8 @@ const findGCD = (firstNum, secondNum) => {
   return dividend.toString()
 }
 
-const gcdGameLogic = () => {
+const gcdGameLogic = (difficulty) => {
+  const maxRandomInt = difficulty === 'n' ? 100 : 200
   const randomNum1 = getRandomInt(0, maxRandomInt)
   const randomNum2 = getRandomInt(0, maxRandomInt)
 

@@ -1,10 +1,11 @@
 import gameCore, { getRandomInt } from '../index.js'
 
-const gameRules = 'What is the result of the expression?'
-const maxRandomInt = 20
 const operationSymbols = ['+', '-', '*']
 
-const calcGameLogic = () => {
+const gameRules = lang => lang.rulesCalcGame
+
+const calcGameLogic = (difficulty) => {
+  const maxRandomInt = difficulty === 'n' ? 20 : 100
   const randomNum1 = getRandomInt(0, maxRandomInt)
   const randomNum2 = getRandomInt(0, maxRandomInt)
   const mathSymbolIn = getRandomInt(0, 3)

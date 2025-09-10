@@ -1,8 +1,6 @@
 import gameCore, { getRandomInt } from '../index.js'
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-const minRandomInt = 1
-const maxRandomInt = 100
+const gameRules = lang => lang.rulesPrimeGame
 
 const isPrime = (num) => {
   if (num === 2) {
@@ -24,9 +22,11 @@ const isPrime = (num) => {
   return true
 }
 
-const primeGameLogic = () => {
+const primeGameLogic = (currentLang, difficulty) => {
+  const minRandomInt = 1
+  const maxRandomInt = difficulty === 'n' ? 100 : 1000
   const randomNum = getRandomInt(minRandomInt, maxRandomInt)
-  const correctAnswer = isPrime(randomNum) ? 'yes' : 'no'
+  const correctAnswer = isPrime(randomNum) ? currentLang.yes : currentLang.no
 
   return [randomNum, correctAnswer]
 }

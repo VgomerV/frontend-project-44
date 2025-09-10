@@ -1,13 +1,13 @@
 import gameCore, { getRandomInt } from '../index.js'
 
-const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".'
-const maxRandomInt = 100
+const gameRules = lang => lang.rulesEvenGame
 
 const isEvenInt = num => num % 2 === 0 ? true : false
 
-const evenGameLogic = () => {
+const evenGameLogic = (currentLang, difficulty) => {
+  const maxRandomInt = difficulty === 'n' ? 100 : 1000
   const randomNum = getRandomInt(0, maxRandomInt)
-  const correctAnswer = isEvenInt(randomNum) ? 'yes' : 'no'
+  const correctAnswer = isEvenInt(randomNum) ? currentLang.yes : currentLang.no
 
   return [randomNum, correctAnswer]
 }
